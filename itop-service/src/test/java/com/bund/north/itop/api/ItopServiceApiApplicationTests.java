@@ -1,13 +1,13 @@
-package com.bund.north.itop;
+package com.bund.north.itop.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ItopApplicationTests {
+class ItopServiceApiApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
