@@ -3,6 +3,9 @@ package com.bund.north.itop.api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author hugo0129
+ */
 @SpringBootApplication
 public class ItopApiApplication {
 

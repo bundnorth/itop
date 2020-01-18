@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.bund.north</groupId>
-    <artifactId>itop-common</artifactId>
+    <artifactId>itop-commons</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>itop-common</name>
+    <name>itop-commons</name>
     <description>common project for Spring Boot</description>
 
     <properties>
