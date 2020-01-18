@@ -10,6 +10,8 @@
     <modules>
         <module>itop-api</module>
         <module>itop-service</module>
+        <module>itop-user</module>
+        <module>itop-common</module>
     </modules>
 
     <parent>
