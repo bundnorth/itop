@@ -1,6 +1,8 @@
 package com.bund.north.itop.api.controller;
 
+import com.bund.north.itop.common.entity.CommonResponse;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,8 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/login")
 public class LoginController {
 
+	@ApiOperation(value = "sayHello测试")
 	@GetMapping("/sayHello")
-	public String sayHello(String name) {
-		return "Welcome to Spring Cloud World," + name;
+	public CommonResponse<String> sayHello(String name) {
+		String data = "Welcome to Spring Cloud World," + name;
+		return CommonResponse.success(data);
 	}
+
 }

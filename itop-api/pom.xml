@@ -32,6 +32,15 @@
             <version>2.9.2</version>
         </dependency>
 
+        <!--引入其它module-->
+
+        <dependency>
+            <groupId>com.bund.north</groupId>
+            <artifactId>itop-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
