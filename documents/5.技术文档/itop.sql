@@ -18,8 +18,8 @@ CREATE TABLE `member` (
   `source_type` int(1) DEFAULT NULL COMMENT '用户来源',
   `integration` int(11) DEFAULT NULL COMMENT '积分',
   `growth` int(11) DEFAULT NULL COMMENT '成长值',
-  `create_time` DEFAULT NULL CURRENT_TIMESTAMP COMMENT '注册时间',
-  `update_time` datetime DEFAULT NULL COMMENT '更新时间',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '注册时间',
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_username` (`username`),
   UNIQUE KEY `idx_phone` (`phone`)
