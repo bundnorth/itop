@@ -7,4 +7,5 @@ package com.bund.north.itop.dao.utils;
  */
 public class MyBatisGenerator {
 
+
 }

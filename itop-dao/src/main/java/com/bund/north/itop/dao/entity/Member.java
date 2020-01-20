@@ -27,6 +27,10 @@ public class Member implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty(value = "id")
+    @TableId
+    private Long id;
+
     @ApiModelProperty(value = "会员号")
     private Long memberId;
 

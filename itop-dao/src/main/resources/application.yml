@@ -6,7 +6,7 @@ spring:
     url: jdbc:mysql://140.143.208.132:3306/itop?useUnicode=true&characterEncoding=utf8
     username: root
     password: Hugo2018!
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
   mapper-locations: classpath:com/bund/north/itop/dao/mapper/*.xml
