@@ -7,6 +7,7 @@
     <groupId>com.bund.north</groupId>
     <artifactId>itop</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <!--模块列表-->
     <modules>

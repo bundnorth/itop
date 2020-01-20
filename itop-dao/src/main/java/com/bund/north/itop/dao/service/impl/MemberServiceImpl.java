@@ -17,4 +17,8 @@ import org.springframework.stereotype.Service;
 @Service("memberService")
 public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> implements MemberService {
 
+	@Override
+	public Boolean addMember(Member member) {
+		return save(member);
+	}
 }

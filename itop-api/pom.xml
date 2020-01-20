@@ -38,7 +38,12 @@
             <groupId>com.bund.north</groupId>
             <artifactId>itop-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bund.north</groupId>
+            <artifactId>itop-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
