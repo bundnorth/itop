@@ -29,7 +29,8 @@ public class SwaggerConfig {
 				.apis(RequestHandlerSelectors.basePackage("com.bund.north.itop.api.dao.controller"))
 				.paths(PathSelectors.any())
 				.build()
-				.tags(new Tag("MemberController", "会员模块"));
+				.tags(new Tag("MemberController", "会员模块"),
+						new Tag("HelloController", "测试模块"));
 	}
 
 	private ApiInfo apiInfo() {

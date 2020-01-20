@@ -6,7 +6,10 @@ import com.bund.north.itop.dao.entity.Member;
 import com.bund.north.itop.dao.service.MemberService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
@@ -19,22 +22,14 @@ import javax.annotation.Resource;
  * @since 2020-01-19
  */
 @Api(tags = {"MemberController"})
-@RestController
-@RequestMapping("/member")
+@RestController(value = "/member")
 public class MemberController {
 
 	@Resource
 	private MemberService memberService;
 
-	@ApiOperation(value = "sayHello测试")
-	@GetMapping("/sayHello")
-	public CommonResponse<String> sayHello(String name) {
-		String data = "Welcome to Spring Cloud World," + name;
-		return CommonResponse.success(data);
-	}
-	
+	@ApiOperation(value = "增加会员")
 	@PostMapping("/add")
-	@ApiOperation("增加会员")
 	public CommonResponse<Boolean> addMember(@RequestBody Member member) {
 		return CommonResponse.success(memberService.save(member));
 	}
