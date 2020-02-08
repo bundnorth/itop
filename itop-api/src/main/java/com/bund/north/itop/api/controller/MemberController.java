@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 /**
  * @Author: Hsiung
  * @Date: 2020/1/20 18:06
- * @Description TODO
+ * @Description 会员模块
  */
 @Api(tags = {"MemberController"})
 @RestController("/member")

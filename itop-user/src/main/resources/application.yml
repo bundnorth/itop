@@ -1,16 +1,34 @@
 server:
   port: 8083
-  servlet:
-    context-path: /itop-user
-
+#  servlet:
+#    context-path: /itop-user
+# spring相关配置
 spring:
+  #  数据源配置
   datasource:
     url: jdbc:mysql://140.143.208.132:3306/itop?useUnicode=true&characterEncoding=utf8
     username: root
     password: Hugo2018!
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  application:
+    name: itop-user
+#mybatis配置
 mybatis:
   mapper-locations: classpath:com/bund/north/itop/user/mapper/*.xml
 mybatis-plus:
   type-aliases-package: com.bund.north.itop.user.entity
+
+#服务注册与发现配置
+eureka:
+  client:
+    service-url:
+      # 服务注册地址
+      defaultZone: http://localhost:8083/itop-eureka/
+    fetch-registry: false
+    register-with-eureka: false
+  #  注册服务名称
+  instance:
+    hostname: itop-eureka
+ribbon:
+  eureka:
+    enabled: true

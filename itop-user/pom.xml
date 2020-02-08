@@ -8,7 +8,6 @@
         <artifactId>itop</artifactId>
     </parent>
 
-    <groupId>com.bund.north</groupId>
     <artifactId>itop-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>itop-user</name>
@@ -19,13 +18,22 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
         <!--mybatis-plus在mybatis基础上开发的组件-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.3.0</version>
         </dependency>
-
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
@@ -46,28 +54,20 @@
             <version>3.0.16.RELEASE</version>
         </dependency>
 
+        <!--fastjson序列化组件-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.62</version>
         </dependency>
 
+        <!--引入其他modules-->
         <dependency>
             <groupId>com.bund.north</groupId>
             <artifactId>itop-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
     </dependencies>
 
     <build>

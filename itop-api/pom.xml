@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.bund.north</groupId>
+    <!--<groupId>com.bund.north</groupId>继承自父工程-->
     <artifactId>itop-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>itop-api</name>
@@ -44,7 +44,6 @@
             <artifactId>itop-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 
     <build>
