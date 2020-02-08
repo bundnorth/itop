@@ -26,7 +26,7 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.bund.north.itop.api.dao.controller"))
+				.apis(RequestHandlerSelectors.basePackage("com.bund.north.itop.dao.controller"))
 				.paths(PathSelectors.any())
 				.build()
 				.tags(new Tag("MemberController", "会员模块"),
