@@ -9,7 +9,6 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.bund.north</groupId>
     <artifactId>itop-model</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>itop-model</name>
@@ -20,6 +19,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.3.0</version>
+        </dependency>
     </dependencies>
 
     <build>
