@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -17,7 +18,8 @@ import javax.annotation.Resource;
  * @Description 会员模块
  */
 @Api(tags = {"MemberController"})
-@RestController("/member")
+@RestController
+@RequestMapping("/member")
 public class MemberController {
 
     @Resource
