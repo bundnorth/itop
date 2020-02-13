@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: itop-eureka-server
+  profiles:
+    active: client2
+server:
+  port: 9998
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      # 设置服务注册中心地址，指向另一个注册中心
+      defaulZone: http://localhost:9997/eureka/

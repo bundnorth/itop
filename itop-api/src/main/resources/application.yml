@@ -10,9 +10,4 @@ eureka:
   client:
     # 服务发现地址
     service-url:
-      defaultZone: http://localhost:8083/itop-eureka/
-    register-with-eureka: false
-    fetch-registry: false
-ribbon:
-  eureka:
-    enabled: true
+      defaultZone: http://localhost:8761/eureka/
