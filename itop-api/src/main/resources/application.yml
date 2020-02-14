@@ -15,3 +15,8 @@ eureka:
     register-with-eureka: true
     #是否从服务注册中心获取可用的服务清单，默认为true
     fetch-registry: true
+feign:
+  # 熔断限流开启
+  hystrix:
+    enabled: true
+

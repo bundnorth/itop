@@ -1,6 +1,7 @@
 package com.bund.north.itop.api.clients.user;
 
 import com.bund.north.itop.api.clients.user.fallback.UserClientFallbackFactory;
+import com.bund.north.itop.api.config.FeignConfig;
 import com.bund.north.itop.common.entity.CommonResponse;
 import com.bund.north.itop.model.entity.Member;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//@FeignClient(name = "itop-user", configuration = FeignConfig.class, fallbackFactory = UserClientFallbackFactory.class)
 @FeignClient(name = "itop-user", fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
 	@GetMapping("/hello/say")

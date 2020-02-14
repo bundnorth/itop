@@ -12,4 +12,6 @@ public interface MemberService {
 	Member getMemberByCondition(Member member);
 
 	List<Member> getAllMembers();
+
+	Member hystrixMember(Member member);
 }

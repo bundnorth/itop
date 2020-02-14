@@ -46,5 +46,13 @@ public class MemberController {
 		return CommonResponse.success(memberService.getAllMembers());
 	}
 
+	@ApiOperation(value = "测试熔断器")
+	@GetMapping("/hystrix/{id}")
+	public CommonResponse<Member> hystrixMember(@PathVariable Long id) {
+		Member member = new Member();
+		member.setId(id);
+		return CommonResponse.success(memberService.hystrixMember(member));
+	}
+
 
 }
