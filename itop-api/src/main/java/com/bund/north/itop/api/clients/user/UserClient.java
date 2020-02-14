@@ -10,15 +10,15 @@ import java.util.List;
 
 @FeignClient(name = "itop-user", fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
-	@RequestMapping(value = "/itop-user/hello/say", method = RequestMethod.GET)
+	@GetMapping("/hello/say")
 	String sayHello();
 
-	@RequestMapping(value = "/itop-user/member/add", method = RequestMethod.POST)
+	@PostMapping("/member/add")
 	CommonResponse<Boolean> addMember(@RequestBody Member member);
 
-	@RequestMapping(value = "/itop-user/member/get/one", method = RequestMethod.POST)
+	@PostMapping("/member/get/one")
 	CommonResponse<Member> getMemberByCondition(@RequestBody Member member);
 
-	@RequestMapping(value = "/itop-user/member/get/all", method = RequestMethod.GET)
+	@GetMapping(value = "/member/get/all")
 	CommonResponse<List<Member>> getAllMembers();
 }
