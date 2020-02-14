@@ -1,4 +1,5 @@
 package com.bund.north.itop.user.controller;
+
 import com.bund.north.itop.common.entity.CommonResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -16,6 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/hello")
 public class HelloController {
+
+	@ApiOperation(value = "sayHello测试")
+	@GetMapping("/say")
+	public String say() {
+		return "Welcome to Spring Cloud World";
+	}
 
 	@ApiOperation(value = "sayHello测试")
 	@GetMapping("/sayHello")
