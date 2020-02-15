@@ -1,5 +1,6 @@
 package com.bund.north.itop.api.config;
 
+import feign.Logger;
 import feign.Request;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -16,5 +17,10 @@ public class FeignConfig {
 	@Bean
 	public Request.Options options() {
 		return new Request.Options(connectTimeout, readTimeout);
+	}
+
+	@Bean
+	Logger.Level feignLevle() {
+		return Logger.Level.FULL;
 	}
 }

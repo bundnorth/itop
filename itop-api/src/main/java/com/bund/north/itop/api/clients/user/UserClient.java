@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@FeignClient(name = "itop-user", configuration = FeignConfig.class, fallbackFactory = UserClientFallbackFactory.class)
-@FeignClient(name = "itop-user", fallbackFactory = UserClientFallbackFactory.class)
+@FeignClient(name = "itop-user", configuration = FeignConfig.class, fallbackFactory = UserClientFallbackFactory.class)
+//@FeignClient(name = "itop-user", fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
 	@GetMapping("/hello/say")
 	String sayHello();

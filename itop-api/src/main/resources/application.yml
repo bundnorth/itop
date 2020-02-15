@@ -20,3 +20,14 @@ feign:
   hystrix:
     enabled: true
 
+hystrix:
+  command:
+    test:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+logging:
+  level:
+    root:
+    com.bund.north.itop.api.clients.user.UserClient: debug
