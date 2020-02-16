@@ -38,7 +38,7 @@ public class TestServiceImpl implements TestService {
 
 	@Override
 	public String say() {
-		return (String) restTemplate.getForObject("http://localhost:8083/test/say", CommonResponse.class).getData();
+		return (String) restTemplate.getForObject("http://itop-user/test/say", CommonResponse.class).getData();
 	}
 
 	@Override

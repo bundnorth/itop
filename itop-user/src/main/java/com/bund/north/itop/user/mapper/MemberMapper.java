@@ -1,7 +1,7 @@
 package com.bund.north.itop.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.bund.north.itop.user.entity.Member;
+import com.bund.north.itop.model.entity.Member;
 
 /**
  * <p>

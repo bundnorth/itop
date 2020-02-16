@@ -3,31 +3,32 @@
 <mapper namespace="com.bund.north.itop.user.mapper.MemberMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.bund.north.itop.user.entity.Member">
-    <result column="id" property="id" />
-        <result column="member_id" property="memberId" />
-        <result column="username" property="username" />
-        <result column="password" property="password" />
-        <result column="nickname" property="nickname" />
-        <result column="phone" property="phone" />
-        <result column="status" property="status" />
-        <result column="icon" property="icon" />
-        <result column="gender" property="gender" />
-        <result column="birthday" property="birthday" />
-        <result column="city" property="city" />
-        <result column="job" property="job" />
-        <result column="personalized_signature" property="personalizedSignature" />
-        <result column="source_type" property="sourceType" />
-        <result column="integration" property="integration" />
-        <result column="growth" property="growth" />
-        <result column="create_time" property="createTime" />
-        <result column="update_time" property="updateTime" />
+    <resultMap id="BaseResultMap" type="com.bund.north.itop.model.entity.Member">
+        <result column="id" property="id"/>
+        <result column="member_id" property="memberId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="nickname" property="nickname"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <result column="status" property="status"/>
+        <result column="icon" property="icon"/>
+        <result column="gender" property="gender"/>
+        <result column="birthday" property="birthday"/>
+        <result column="city" property="city"/>
+        <result column="job" property="job"/>
+        <result column="personalized_signature" property="personalizedSignature"/>
+        <result column="source_type" property="sourceType"/>
+        <result column="integration" property="integration"/>
+        <result column="growth" property="growth"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id,
-        member_id, username, password, nickname, phone, status, icon, gender, birthday, city, job, personalized_signature, source_type, integration, growth, create_time, update_time
+        member_id, username, password, nickname, phone,email, status, icon, gender, birthday, city, job, personalized_signature, source_type, integration, growth, create_time, update_time
     </sql>
 
 </mapper>

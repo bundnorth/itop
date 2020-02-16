@@ -17,7 +17,17 @@ public class UserClientFallbackFactory implements FallbackFactory<UserClient> {
 	public UserClient create(Throwable e) {
 		return new UserClient() {
 			@Override
-			public String sayHello() {
+			public CommonResponse<String> timeOut(int mills) {
+				return null;
+			}
+
+			@Override
+			public CommonResponse<String> say() {
+				return null;
+			}
+
+			@Override
+			public CommonResponse<String> sayHello(String name) {
 				return null;
 			}
 

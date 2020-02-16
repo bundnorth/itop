@@ -15,14 +15,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/login")
 public class LoginController {
-
-	@ApiOperation(value = "sayHello测试")
-	@GetMapping("/sayHello")
-	public CommonResponse<String> sayHello(String name) {
-		String data = "Welcome to Spring Cloud World," + name;
-		return CommonResponse.success(data);
-	}
-
 	/**
 	 * 生成普通的登录验证码
 	 */
