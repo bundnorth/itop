@@ -28,6 +28,11 @@ public class UserClientFallbackFactory implements FallbackFactory<UserClient> {
 			}
 
 			@Override
+			public CommonResponse<Boolean> updateMember(Member member) {
+				return null;
+			}
+
+			@Override
 			public CommonResponse<Member> getMemberByCondition(Member member) {
 				log.error("UserClient#getMemberByCondition encounter a problem with param member:[{}]", member, e);
 				return null;

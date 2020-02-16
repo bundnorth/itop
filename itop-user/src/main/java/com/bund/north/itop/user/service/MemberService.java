@@ -1,7 +1,7 @@
 package com.bund.north.itop.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.bund.north.itop.user.entity.Member;
+import com.bund.north.itop.model.entity.Member;
 
 /**
  * <p>
@@ -12,5 +12,5 @@ import com.bund.north.itop.user.entity.Member;
  * @since 2020-01-19
  */
 public interface MemberService extends IService<Member> {
-    Boolean addMember(Member member);
+	Boolean addMember(Member member);
 }

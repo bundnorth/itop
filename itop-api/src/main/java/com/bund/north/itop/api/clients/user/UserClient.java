@@ -12,11 +12,20 @@ import java.util.List;
 @FeignClient(name = "itop-user", configuration = FeignConfig.class, fallbackFactory = UserClientFallbackFactory.class)
 //@FeignClient(name = "itop-user", fallbackFactory = UserClientFallbackFactory.class)
 public interface UserClient {
-	@GetMapping("/hello/say")
-	String sayHello();
+	@GetMapping("/test/timeOut")
+	CommonResponse<String> timeOut(@RequestParam(name = "mills") int mills);
+
+	@GetMapping("/test/say")
+	CommonResponse<String> say();
+
+	@GetMapping("/test/sayHello")
+	CommonResponse<String> sayHello(@RequestParam(name = "name") String name);
 
 	@PostMapping("/member/add")
 	CommonResponse<Boolean> addMember(@RequestBody Member member);
+
+	@PostMapping("/member/update/one")
+	CommonResponse<Boolean> updateMember(@RequestBody Member member);
 
 	@PostMapping("/member/get/one")
 	CommonResponse<Member> getMemberByCondition(@RequestBody Member member);

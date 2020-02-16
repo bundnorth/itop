@@ -6,6 +6,17 @@ server:
 spring:
   application:
     name: itop-api
+  # 邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: hugo0129@qq.com
+    password: dsxozsdnemngdiha
+    from: hugo0129@qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
 eureka:
   client:
     # 服务发现地址
@@ -20,9 +31,10 @@ feign:
   hystrix:
     enabled: true
 
+# hystrix熔断器配置
 hystrix:
   command:
-    test:
+    default:
       execution:
         isolation:
           thread:

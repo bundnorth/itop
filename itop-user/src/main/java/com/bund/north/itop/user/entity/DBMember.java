@@ -1,4 +1,4 @@
-package com.bund.north.itop.model.entity;
+package com.bund.north.itop.user.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
@@ -23,7 +23,8 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @ApiModel(value = "Member对象", description = "会员表")
-public class Member implements Serializable {
+@Deprecated
+public class DBMember implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -45,9 +46,6 @@ public class Member implements Serializable {
 
 	@ApiModelProperty(value = "手机号码")
 	private String phone;
-
-	@ApiModelProperty("电子邮箱")
-	private String email;
 
 	@ApiModelProperty(value = "帐号启用状态:0->禁用；1->启用")
 	private Integer status;

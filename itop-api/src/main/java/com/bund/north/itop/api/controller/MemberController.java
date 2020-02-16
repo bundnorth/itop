@@ -23,11 +23,6 @@ public class MemberController {
 	@Resource
 	private MemberService memberService;
 
-	@GetMapping("/say")
-	public CommonResponse<String> sayHello() {
-		return CommonResponse.success(memberService.sayHello());
-	}
-
 	@ApiOperation(value = "新增会员")
 	@PostMapping("/add")
 	public CommonResponse<Boolean> addMember(@RequestBody Member member) {
@@ -45,14 +40,5 @@ public class MemberController {
 	public CommonResponse<List<Member>> getAllMembers() {
 		return CommonResponse.success(memberService.getAllMembers());
 	}
-
-	@ApiOperation(value = "测试熔断器")
-	@GetMapping("/hystrix/{id}")
-	public CommonResponse<Member> hystrixMember(@PathVariable Long id) {
-		Member member = new Member();
-		member.setId(id);
-		return CommonResponse.success(memberService.hystrixMember(member));
-	}
-
 
 }

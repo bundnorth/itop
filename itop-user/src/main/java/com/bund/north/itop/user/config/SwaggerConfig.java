@@ -30,7 +30,7 @@ public class SwaggerConfig {
 				.paths(PathSelectors.any())
 				.build()
 				.tags(new Tag("MemberController", "会员模块"),
-						new Tag("HelloController", "测试模块"));
+						new Tag("TestController", "测试模块"));
 	}
 
 	private ApiInfo apiInfo() {

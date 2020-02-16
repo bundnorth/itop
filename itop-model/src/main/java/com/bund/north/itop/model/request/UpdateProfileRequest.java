@@ -1,35 +1,12 @@
-package com.bund.north.itop.model.entity;
+package com.bund.north.itop.model.request;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
-/**
- * <p>
- * 会员表
- * </p>
- *
- * @author hugo0129
- * @since 2020-01-19
- */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-@ApiModel(value = "Member对象", description = "会员表")
-public class Member implements Serializable {
-
-	private static final long serialVersionUID = 1L;
-
-	@ApiModelProperty(value = "id")
-	@TableId
-	private Long id;
+public class UpdateProfileRequest {
 
 	@ApiModelProperty(value = "会员号")
 	private Long memberId;
@@ -78,12 +55,4 @@ public class Member implements Serializable {
 
 	@ApiModelProperty(value = "成长值")
 	private Integer growth;
-
-	@ApiModelProperty(value = "注册时间")
-	private LocalDateTime createTime;
-
-	@ApiModelProperty(value = "更新时间")
-	private LocalDateTime updateTime;
-
-
 }

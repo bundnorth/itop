@@ -5,7 +5,7 @@ import com.bund.north.itop.model.entity.Member;
 import java.util.List;
 
 public interface MemberService {
-	String sayHello();
+	Boolean updateMember(Member member);
 
 	Boolean addMember(Member member);
 

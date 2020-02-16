@@ -22,8 +22,9 @@ public class MemberServiceImpl implements MemberService {
 	private UserClient userClient;
 
 	@Override
-	public String sayHello() {
-		return userClient.sayHello();
+	public Boolean updateMember(Member member) {
+		CommonResponse<Boolean> result = userClient.updateMember(member);
+		return result.getData();
 	}
 
 	@Override
