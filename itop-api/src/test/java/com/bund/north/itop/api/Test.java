@@ -2,6 +2,8 @@ package com.bund.north.itop.api;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -19,5 +21,15 @@ public class Test {
 		System.out.println(df2.format(d1));
 		System.out.println(d2);
 		System.out.println(d1.equals(d2));
+
+		String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		LocalDateTime.now();
+		System.out.println(date);
+
+		System.out.println(new Date());
+
+//		Date startDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+//				.parse(date2);
+		System.out.println();
 	}
 }
