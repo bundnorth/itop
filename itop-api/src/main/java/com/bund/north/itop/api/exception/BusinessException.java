@@ -2,9 +2,11 @@ package com.bund.north.itop.api.exception;
 
 import com.bund.north.itop.common.constant.SystemErrorMessage;
 import com.bund.north.itop.common.enumeration.SystemErrorEnum;
+import lombok.Data;
 
 import static com.bund.north.itop.common.enumeration.SystemErrorEnum.SYSTEM_ERROR;
 
+@Data
 public class BusinessException extends RuntimeException {
 	private String code;
 	private String message;

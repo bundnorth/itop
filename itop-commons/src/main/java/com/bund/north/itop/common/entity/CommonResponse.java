@@ -59,6 +59,12 @@ public class CommonResponse<T> {
 		return new CommonResponse<>(data);
 	}
 
+
+	public static <T> CommonResponse<T> failed(String code, String message) {
+		return new CommonResponse<>(code, message);
+	}
+
+
 	public static <T> CommonResponse<T> failed(T data) {
 		return new CommonResponse<>(SYSTEM_ERROR.getCode(), SYSTEM_ERROR.getMessage(), data);
 	}

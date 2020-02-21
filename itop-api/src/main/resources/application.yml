@@ -22,6 +22,11 @@ spring:
     host: 140.143.208.132
     port: 6379
     password: 123456
+    timeout: 10
+    jedis:
+      pool:
+        max-idle: 500
+        max-wait: 1000
 eureka:
   client:
     # 服务发现地址
@@ -43,10 +48,10 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 8000
+            timeoutInMilliseconds: 800000
 ribbon:
-  ReadTimeout: 8000
-  ConnectTimeout: 8000
+  ReadTimeout: 800000
+  ConnectTimeout: 800000
 logging:
   level:
     root:

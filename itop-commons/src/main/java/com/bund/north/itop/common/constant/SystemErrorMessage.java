@@ -18,8 +18,11 @@ public class SystemErrorMessage {
 	public static SystemErrorMessage ACCESS_LIMIT_REACHED = new SystemErrorMessage("500104", "访问太频繁！");
 
 	/**
-	 * 登录模块 5002XX
+	 * 注册登录模块 5002XX
 	 */
+	public static SystemErrorMessage MOBILE_EXISTS = new SystemErrorMessage("500201", "用户已经存在，请直接登录");
+	public static SystemErrorMessage EMAIL_EXISTS = new SystemErrorMessage("500202", "用户已经存在，请直接登录");
+
 	public static SystemErrorMessage SESSION_ERROR = new SystemErrorMessage("500210", "Session不存在或者已经失效");
 	public static SystemErrorMessage PASSWORD_EMPTY = new SystemErrorMessage("500211", "登录密码不能为空");
 	public static SystemErrorMessage MOBILE_EMPTY = new SystemErrorMessage("500212", "手机号不能为空");
