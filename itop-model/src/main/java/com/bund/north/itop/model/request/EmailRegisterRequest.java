@@ -1,6 +1,5 @@
 package com.bund.north.itop.model.request;
 
-import com.bund.north.itop.model.constant.RegexpConstant;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

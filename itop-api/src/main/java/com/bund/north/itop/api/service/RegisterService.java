@@ -8,7 +8,5 @@ public interface RegisterService {
 
 	Boolean byMobile(MobileRegisterRequest request);
 
-	String sendEmailCode(String email);
-
-	Boolean sendMobileCode(String mobile);
+	String sendMobileCode(String mobile);
 }

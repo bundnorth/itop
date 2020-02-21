@@ -1,14 +1,14 @@
 package com.bund.north.itop.api.exception;
 
-import com.bund.north.itop.common.constant.CodeMessage;
+import com.bund.north.itop.common.constant.SystemErrorMessage;
 import lombok.Data;
 
 @Data
 public class GlobalException extends RuntimeException {
-	private CodeMessage codeMessage;
+	private SystemErrorMessage systemErrorMessage;
 
-	public GlobalException(CodeMessage codeMessage) {
-		super(codeMessage.toString());
-		this.codeMessage = codeMessage;
+	public GlobalException(SystemErrorMessage systemErrorMessage) {
+		super(systemErrorMessage.toString());
+		this.systemErrorMessage = systemErrorMessage;
 	}
 }

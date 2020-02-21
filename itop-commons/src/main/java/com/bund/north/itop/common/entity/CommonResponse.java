@@ -1,12 +1,12 @@
 package com.bund.north.itop.common.entity;
 
-import com.bund.north.itop.common.constant.CodeMessage;
+import com.bund.north.itop.common.constant.SystemErrorMessage;
 import lombok.Data;
 
 import java.util.Objects;
 
-import static com.bund.north.itop.common.enumeration.SystemEnum.SYSTEM_ERROR;
-import static com.bund.north.itop.common.enumeration.SystemEnum.SYSTEM_SUCCESS;
+import static com.bund.north.itop.common.enumeration.SystemErrorEnum.SYSTEM_ERROR;
+import static com.bund.north.itop.common.enumeration.SystemErrorEnum.SYSTEM_SUCCESS;
 
 /**
  * @Author: Hsiung
@@ -48,10 +48,10 @@ public class CommonResponse<T> {
 		this.data = data;
 	}
 
-	private CommonResponse(CodeMessage codeMessage) {
-		if (Objects.nonNull(codeMessage)) {
-			this.code = String.valueOf(codeMessage.getCode());
-			this.message = codeMessage.getMessage();
+	private CommonResponse(SystemErrorMessage systemErrorMessage) {
+		if (Objects.nonNull(systemErrorMessage)) {
+			this.code = String.valueOf(systemErrorMessage.getCode());
+			this.message = systemErrorMessage.getMessage();
 		}
 	}
 
@@ -63,8 +63,8 @@ public class CommonResponse<T> {
 		return new CommonResponse<>(SYSTEM_ERROR.getCode(), SYSTEM_ERROR.getMessage(), data);
 	}
 
-	public static <T> CommonResponse<T> failed(CodeMessage codeMessage) {
-		return new CommonResponse<T>(codeMessage);
+	public static <T> CommonResponse<T> failed(SystemErrorMessage systemErrorMessage) {
+		return new CommonResponse<T>(systemErrorMessage);
 	}
 
 }

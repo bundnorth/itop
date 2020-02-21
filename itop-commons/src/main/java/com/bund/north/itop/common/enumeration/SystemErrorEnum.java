@@ -5,7 +5,7 @@ package com.bund.north.itop.common.enumeration;
  * @Date: 2020/1/18 15:49
  * @Description 系统错误枚举类
  */
-public enum SystemEnum {
+public enum SystemErrorEnum {
 	/**
 	 * 系统错误，请重试
 	 */
@@ -25,7 +25,7 @@ public enum SystemEnum {
 	 */
 	private String message;
 
-	SystemEnum(String code, String message) {
+	SystemErrorEnum(String code, String message) {
 		this.code = code;
 		this.message = message;
 	}

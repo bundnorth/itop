@@ -1,6 +1,6 @@
 package com.bund.north.itop.api.exception;
 
-import com.bund.north.itop.common.constant.CodeMessage;
+import com.bund.north.itop.common.constant.SystemErrorMessage;
 import com.bund.north.itop.common.entity.CommonResponse;
 import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
@@ -20,15 +20,15 @@ public class GlobalExceptionHandler {
 		e.fillInStackTrace();
 		if (e instanceof GlobalException) {
 			GlobalException ex = (GlobalException) e;
-			return CommonResponse.failed(ex.getCodeMessage());
+			return CommonResponse.failed(ex.getSystemErrorMessage());
 		} else if (e instanceof BindException) {
 			BindException ex = (BindException) e;
 			List<ObjectError> errors = ex.getAllErrors();
 			ObjectError error = errors.get(0);
 			String msg = error.getDefaultMessage();
-			return CommonResponse.failed(CodeMessage.BIND_ERROR.fillArgs(msg));
+			return CommonResponse.failed(SystemErrorMessage.BIND_ERROR.fillArgs(msg));
 		} else {
-			return CommonResponse.failed(CodeMessage.SERVER_ERROR);
+			return CommonResponse.failed(SystemErrorMessage.SERVER_ERROR);
 		}
 	}
 }
