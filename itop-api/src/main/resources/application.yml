@@ -27,6 +27,10 @@ spring:
       pool:
         max-idle: 500
         max-wait: 1000
+  # 返回的api接口配置
+  jackson:
+    # 默认某一个字段为NULL，则不返回
+    default-property-inclusion: non_null
 eureka:
   client:
     # 服务发现地址
