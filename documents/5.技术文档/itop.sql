@@ -23,4 +23,23 @@ CREATE TABLE `member` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_username` (`username`),
   UNIQUE KEY `idx_phone` (`phone`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='会员表'
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='会员表';
+
+create table admin
+(
+	id tinyint auto_increment,
+	username varchar(64) not null comment '用户名',
+	password varchar(64) null comment '密码
+',
+	nickname varchar(64) null comment '昵称',
+	mobile varchar(64) null comment '手机号',
+	email varchar(64) null comment '邮箱',
+	status int null comment '状态：1-正常 2-停用 3-删除',
+	constraint admin_pk
+		primary key (id)
+)
+comment '管理员表';
+
+create unique index admin_username_uindex
+	on admin (username);
+

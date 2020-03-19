@@ -5,6 +5,7 @@ import com.bund.north.itop.common.entity.CommonResponse;
 import com.bund.north.itop.model.request.LoginRequest;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(tags = {"LoginController"})
 @RestController
 @RequestMapping("/login")
+@Slf4j
 public class LoginController {
 	@Autowired
 	private LoginService loginService;
@@ -33,6 +35,7 @@ public class LoginController {
 	@PostMapping("/mobile")
 	public CommonResponse<Boolean> loginByMobile(@RequestParam("mobile") String mobile,
 												 @RequestParam("code") String code) {
+		log.debug("");
 		return CommonResponse.success(loginService.loginByMobile(mobile, code));
 	}
 

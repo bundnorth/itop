@@ -24,3 +24,13 @@ CREATE TABLE `member` (
   UNIQUE KEY `idx_phone` (`phone`),
   UNIQUE KEY `idx_email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='会员表';
+
+create table `admin`(
+ `id` tinyint(2) not null auto_increment,
+ `username` varchar(64) not null comment `用户名`,
+ `password` varchar(64) not null comment `密码`,
+ `nickname` varchar(64) DEFAULT NULL COMMENT '昵称',
+ `phone` varchar(64) DEFAULT NULL COMMENT '手机号码',
+ `email` varchar(100) DEFAULT NULL COMMENT '邮箱',
+ `status` int(1) DEFAULT NULL COMMENT '帐号启用状态:0->禁用；1->启用'
+)

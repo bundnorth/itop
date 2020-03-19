@@ -70,6 +70,14 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!--阿里云oss文件传输-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+
         <dependency>
             <groupId>com.bund.north</groupId>
             <artifactId>itop-model</artifactId>

@@ -15,6 +15,7 @@
         <module>itop-user</module>
         <module>itop-commons</module>
         <module>itop-model</module>
+        <module>itop-test</module>
     </modules>
 
     <!--spring boot parent-->
