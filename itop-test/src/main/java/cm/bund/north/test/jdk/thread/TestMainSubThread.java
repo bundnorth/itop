@@ -8,14 +8,13 @@ public class TestMainSubThread {
 	public static void main(String[] args) {
 		System.out.println("This is main Thread start:" + Thread.currentThread().getName());
 		SubThread subThread = new SubThread();
-		subThread.start();
+		subThread.run();
 		System.out.println("This is main Thread end:" + Thread.currentThread().getName());
 
 	}
 }
 
-class SubThread extends Thread {
-	@Override
+class SubThread {
 	public void run() {
 		try {
 			Thread.sleep(10000);
